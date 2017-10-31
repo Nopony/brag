@@ -1,0 +1,11 @@
+extends layout
+block title
+	| Contact me
+block content
+	.wrap-cards
+		+my-card-links('Contact', '/assets/contact.jpg', ['Please email me at: hello@briancamacho.me or reach out via my socials below'],
+		[
+			{href: 'https://www.linkedin.com/in/brian-camacho/', name: 'linkedin'},
+			{href: 'https://github.com/Nopony/', name: 'github'}
+		])
+

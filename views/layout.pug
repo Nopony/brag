@@ -1,0 +1,23 @@
+html
+    include card.pug
+    include cardlinks.pug
+    include lorem.pug
+    head
+        link(rel="stylesheet", href='/styles/layout.css')
+        link(rel="stylesheet", href="/assets/css/font-awesome.css")
+    body
+        div#main-row.animated-gradient-bg
+            div#side-nav
+                - var tabIcons ={me: 'user-o', projects: 'cube', experience: 'handshake-o', tech: 'flask', contact: 'envelope-open-o'}
+                each tab in Object.keys(tabIcons)
+                    if(tab !== 'tech')
+                        a(href="/" + tab).side-item(id="side-item-" + tab)
+                            i(id="fa-" + tab, class='fa fa-' + tabIcons[tab])
+
+
+            div#main-col
+                .title-sector
+                    span
+                        block title
+                block content
+        script(src="/scripts/global.js")

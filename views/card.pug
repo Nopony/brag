@@ -1,0 +1,13 @@
+mixin my-card(title, imgsrc, ...text)
+    .my-card
+        .rounded-img-padding
+            .rounded-img-host(style="background-image:url(" + imgsrc + ")")
+        .card-block
+            .card-title
+                h4
+                    em=title
+
+            for block, i in text
+                .card-text=block
+                if(i !== text.length - 1)
+                    hr

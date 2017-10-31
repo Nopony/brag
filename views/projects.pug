@@ -1,0 +1,34 @@
+extends layout
+block title
+	| Experience
+block content
+	.wrap-cards
+		.column
+			+my-card-links('Involve',
+			'/assets/involve.jpg',
+			['As a co-founder of an NGO, I collaborated on a web platform for facilitating problem-based education ' +
+			'among young people.' +
+			'The platform allows for the creation of projects with a set of assigned roles, which are then advertised ' +
+			'to people looking to collaborate.'],
+			[{
+				href: 'https://invity.space',
+				name: 'www'
+			},
+				{
+					href: 'https://github.com/Nopony/Involve',
+					name: 'github'
+				}])
+		.column
+			+my-card-links('Scientific Output Visualiser',
+			'/assets/vis.jpg',
+			['The project consists of 6 data visualisations which are based on data gathered from an uploaded file ' +
+			'(example files are available in the data section).'],
+			[{href: 'http://visualizeme.umk.pl/en/', name: 'www'},
+				{href: 'http://github.com/Nopony/vis', name: 'github'}])
+		.column
+			+my-card-links('Chess',
+			'/assets/chess.jpg',
+			['A colour-based image recognition program written in OpenCV. Currently, it can recognise the position ' +
+			'of checker pieces on a board, send the information to a remote server ' +
+			'which then communicates with multiple front ends.'],
+			[{href: 'http://github.com/Nopony/chess', name: 'github'}])
