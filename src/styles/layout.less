@@ -16,7 +16,6 @@ html body {
 }
 
 #main-row {
-  //background: linear-gradient(to right top, #d4ddfd, #fdf9fd);
   width: 100%;
   margin: 0 0 0 0;
   display: flex;
@@ -108,7 +107,7 @@ html body {
   }
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1220px) and (min-width: 641px) {
   [id^=side-item] {
     font-size: 30px !important;
   }
@@ -139,7 +138,7 @@ html body {
 .column {
   background-color: inherit !important;
   display: inline-block;
-  padding: 0 1.5vw;
+  padding: 1vw 1.5vw;
 }
 
 .rounded-img-host{
@@ -240,10 +239,12 @@ html body {
   text-align: center;
 }
 
-@media screen and (max-width: 1300px) {
+
+
+@media (max-width: 1300px) {
   .wrap-cards {
     display: block;
-    height: 80%;
+    height: unset;
   }
   .column {
     display: flex;
@@ -265,30 +266,51 @@ html body {
     height: 20%;
     font-size: 3.5em;
   }
-
-
 }
 
-@media screen and (max-width: 640px) {
-  .my-card {
-    width: 75vw;
-    height: 100vw;
-  }
-  .card-title {
-    font-size: 1.5em;
-  }
-  .card-text {
-    font-size: 1.2em;
-  }
-  .title-sector span {
-    height: 20%;
-    font-size: 3.5em;
+@media (max-width: 640px) and (min-width: 0px) {
+  #side-nav {
+    display: flex;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 92vh;
+    left: 0;
+
+    width: 100%;
+    height: 8vh;
+
+    max-width: unset;
+
+    z-index: 100;
+
   }
 
-  .card-wrapper {
-    min-height: 80%;
+  .column {
+    margin-bottom: 4vh;
   }
+  .side-item {
+    display: inline-block;
+
+    height: 100%;
+    width: 100%;
+
+    margin-left: unset;
+    margin-right: unset;;
+    max-width: unset;
+    max-height: unset;
+    min-width: unset;
+    min-height: unset;
+    z-index: unset;
+    box-shadow: unset;
+
+    border-width: 0 0 1px 1px;
+    border-radius: 0;
 
 
-
+    & .fa {
+      color: black;
+      font-size: 5vw;
+    }
+  }
 }
